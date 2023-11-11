@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-size{
+    position: relative;
+}
+
+.rectangle{
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.pointer-event-block {
+    pointer-events: none
+}
+
+.rectangle:hover{
+    cursor: pointer;
+}
+
+.rectangle:active{
+    box-sizing: border-box;
+    border: 5px solid purple;
+}
+
+.panel {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+}
+
+.start-game {
+    width: 100vh;
+    height: 100vh;
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-game-btn {
+    background-color: green;
+    cursor: pointer;
+    padding: 25px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+
+.game-starting {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.round-end{
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.round-end-hidden {
+    display: none;
+}
+
+.play-next-round {
+    background-color: green;
+    cursor: pointer;
+    padding: 25px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.game-end {
+    position: relative;
+    width: 100vh;
+    height: 100vh;
+    text-align: center;
+
+}
+
+.game-end-container{
+    width: 100vh;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.play-again {
+    background-color: green;
+    cursor: pointer;
+    padding: 25px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
