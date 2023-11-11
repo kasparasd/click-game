@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #F9F9F9;
 }
 .game-size{
     position: relative;
@@ -25,7 +26,7 @@ body {
 
 .rectangle:active{
     box-sizing: border-box;
-    border: 5px solid purple;
+    border: 5px solid white;
 }
 
 .panel {
@@ -106,7 +107,7 @@ body {
 .play-again {
     background-color: green;
     cursor: pointer;
-    padding: 25px;
+    padding: 25px 0;
     color: white;
     font-weight: bold;
     border-radius: 10px;

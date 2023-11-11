@@ -26,7 +26,7 @@ window.onresize = resize;
 
 gameSize.style.width = `${width-padding}px`;
 gameSize.style.height = `${height-padding}px`;
-gameSize.style.backgroundColor = 'green';
+gameSize.style.backgroundColor = '#66FF99';
 // screen size end
 //////////////////////////////////////////////////////////////
 
@@ -76,7 +76,7 @@ function gameStartNextRound(){
     gameSize.classList.remove('hidden') 
     panel.classList.remove('hidden') 
     rectangle.classList.remove('hidden')
-    rectangle.style.backgroundColor='black'
+    rectangle.style.backgroundColor='#9966FF'
 
     pcResultDOM.innerHTML = `PC points: 0`;
     playerResultDOM.innerHTML = `Your points: 0`;
