@@ -1,8 +1,8 @@
-let height = window.innerHeight;
-let width = window.innerWidth;
+const padding = 50;
+let height = window.innerHeight-padding;
+let width = window.innerWidth-padding;
 const gameSize = document.querySelector('.game-size');
 const panel = document.querySelector('.panel')
-const padding = 50;
 const seconds = 5;
 const rounds = 3;
 
@@ -18,14 +18,12 @@ function resize() {
 
     gameSize.style.width = `${width-padding}px`;
     gameSize.style.height = `${height-padding}px`;
-    gameSize.classList.add('hidden') 
-    panel.classList.add('hidden') 
 }
 
 window.onresize = resize;
 
-gameSize.style.width = `${width-padding}px`;
-gameSize.style.height = `${height-padding}px`;
+gameSize.style.width = `${width}px`;
+gameSize.style.height = `${height}px`;
 gameSize.style.backgroundColor = '#66FF99';
 // screen size end
 //////////////////////////////////////////////////////////////
@@ -69,7 +67,6 @@ rectangle.addEventListener('click',()=>{
 })
 //////////////////////////////////////////////////////////////////////////////
 
-
 function gameStartNextRound(){
     counterDOM.innerHTML = `Time: ${seconds}`
     gameStartMenu.style.display = 'none';
@@ -83,17 +80,22 @@ function gameStartNextRound(){
     roundDOM.innerHTML = `Round: ${roundCount}`;
   
     const interval = setInterval(function(){
+       
 
         roundNumberDOM.innerText = `Round: ${roundCount}/${rounds}`
 
-        rectangle.style.top = `${randomNum(0,height-padding-50)}px`
-        rectangle.style.left = `${randomNum(0, width-padding-50)}px`
+        rectangle.style.top = `${randomNum(0,height-padding-70)}px`
+        rectangle.style.left = `${randomNum(0, width-padding-70)}px`
+
+        
+    
 
         secondsCount++
 
         counterDOM.innerText = `Time: ${seconds-secondsCount}`
 
         if(!rectangle.classList.contains('pointer-event-block')){
+            console.log(rectangle);
             pointsForPc++
             pcResultDOM.innerHTML = `PC points: ${pointsForPc}`
         }
