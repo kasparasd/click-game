@@ -1,6 +1,6 @@
 const padding = 50;
-let height = window.innerHeight-padding;
-let width = window.innerWidth-padding;
+let height = window.visualViewport.height - padding;
+let width = window.visualViewport.width - padding;
 const gameSize = document.querySelector('.game-size');
 const panel = document.querySelector('.panel')
 const seconds = 5;
@@ -13,11 +13,11 @@ rulesDOM.innerHTML = `${rounds} Rounds, ${seconds} Clicks in each round`
 /////////////////////////////////////////////////
 // screen size
 function resize() {
-    height = window.innerHeight;
-    width =  window.innerWidth;
+    height = window.visualViewport.height-padding;
+    width =  window.visualViewport.width-padding;
 
-    gameSize.style.width = `${width-padding}px`;
-    gameSize.style.height = `${height-padding}px`;
+    gameSize.style.width = `${width}px`;
+    gameSize.style.height = `${height}px`;
 }
 
 window.onresize = resize;
@@ -80,22 +80,16 @@ function gameStartNextRound(){
     roundDOM.innerHTML = `Round: ${roundCount}`;
   
     const interval = setInterval(function(){
-       
-
         roundNumberDOM.innerText = `Round: ${roundCount}/${rounds}`
 
-        rectangle.style.top = `${randomNum(0,height-padding-70)}px`
+        rectangle.style.top = `${randomNum(0, height-padding-70)}px`
         rectangle.style.left = `${randomNum(0, width-padding-70)}px`
-
-        
-    
 
         secondsCount++
 
         counterDOM.innerText = `Time: ${seconds-secondsCount}`
 
         if(!rectangle.classList.contains('pointer-event-block')){
-            console.log(rectangle);
             pointsForPc++
             pcResultDOM.innerHTML = `PC points: ${pointsForPc}`
         }
@@ -149,6 +143,7 @@ const finalRoundDOM = document.querySelector('.final-round')
 const playAgainDOM = document.querySelector('.play-again')
 
 playAgainDOM.addEventListener('click', ()=>{
+
     roundCount = 1;
     pcRoundWins = 0;
     playerRoundWins =0;
@@ -175,6 +170,8 @@ const roundEnd = document.querySelector('.round-end')
 //////////////////////////////////////////////////////////
 // next round
 startGameBtnDOM.addEventListener('click', ()=>{
+    
+
     roundDOM.innerHTML = `Round: ${roundCount}`;
     playerResultDOM.innerHTML = 0;
     pcResultDOM.innerHTML = 0;
