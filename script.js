@@ -121,7 +121,7 @@ function gameStartNextRound(){
                     pcWinRoundsDOM.innerHTML = `PC win rounds: ${pcRoundWins}`;
                     finalRoundDOM.innerText = `Round: ${roundCount-1}/${rounds}`;
                     if(playerRoundWins>pcRoundWins){
-                        winnerDOM.innerText = `You won`
+                        winnerDOM.innerText = `You are the winner`
                     } else if(playerRoundWins<pcRoundWins) {
                         winnerDOM.innerText = `You lost`;
                     } else winnerDOM.innerText = `No winner`;
