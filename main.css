@@ -38,9 +38,7 @@ body {
 }
 
 .start-game {
-    width: 100vh;
-    height: 100vh;
-    /* display: none; */
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,8 +66,7 @@ body {
 }
 
 .round-end{
-    width: 100vh;
-    height: 100vh;
+    margin-top: 150px;
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -90,20 +87,11 @@ body {
     border-radius: 10px;
 }
 
-.game-end {
-    position: relative;
-    width: 100vh;
-    height: 100vh;
-    text-align: center;
-
-}
 
 .game-end-container{
-    width: 100vh;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    text-align: center;
+    width: 200px;
+    margin-top: 150px;
 }
 
 .play-again {

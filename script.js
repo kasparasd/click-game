@@ -5,10 +5,17 @@ const gameSize = document.querySelector('.game-size');
 const panel = document.querySelector('.panel')
 const seconds = 5;
 const rounds = 3;
+const bodyDOM = document.querySelector('body');
+
 
 const rulesDOM = document.querySelector('.game-rules');
 rulesDOM.innerHTML = `${rounds} Rounds, ${seconds} Clicks in each round`
 
+
+window.addEventListener("load", () => {
+    bodyDOM.style.width = `${window.visualViewport.width}`
+    bodyDOM.style.height = `${window.visualViewport.height}`
+  });
 
 /////////////////////////////////////////////////
 // screen size
